@@ -16,11 +16,11 @@ const useAxiosFetch = (dataUrl) => {
                 const response = await axios.get(url, {cancelToken: source.token})
                 if(isMounted){
                     setData(response.data);
-                    setFetchError(null);
+                    // setFetchError(null);
                 }
             } catch (err) {
                 if(isMounted){
-                    setFetchError(err.message);
+                    // setFetchError(err.message);
                     setData([]);
                 }
             } finally {
